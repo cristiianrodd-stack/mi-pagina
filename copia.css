@@ -1,55 +1,108 @@
 /* Reset básico */
 * {
-  margin: 0;                  /* elimina márgenes por defecto */
-  padding: 0;                 /* elimina rellenos por defecto */
-  box-sizing: border-box;     /* ancho/alto incluye padding y borde */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Franja superior */
 header {
-  background-color: #ffea00e4; /* color de fondo */
+  background-color: #ffea00e4;
   width: 100%;
   display: flex;
-  align-items: center;         /* centra verticalmente */
-  justify-content: space-between; /* logo a la izquierda, menú a la derecha */
-  padding: 1px 50px;           /* espacio interno */
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px; /* más equilibrado en móvil */
 }
 
 /* Logo */
 .logo {
-  height: 90px;                /* tamaño del logo */
+  height: 60px; /* más pequeño en móvil */
 }
 
 /* Contenedor de enlaces */
 .baner-superior {
   display: flex;
-  gap: 50px;                   /* espacio entre enlaces */
+  gap: 30px;
 }
 
 /* Enlaces */
 .baner-superior a {
-  text-decoration: none;       /* sin subrayado */
-  color: #2d2d2d;              /* color inicial */
-  font-size: 18px;             /* tamaño de fuente */
-  font-weight: 300;            /* letra más delgada */
-  font-family: sans-serif;     /* tipografía limpia */
-  transition: color 0.3s ease; /* animación suave al cambiar color */
+  text-decoration: none;
+  color: #2d2d2d;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+  transition: color 0.3s ease;
 }
 
 .baner-superior a:hover {
-  color: #b4b4b4;                 /* cambia a blanco al pasar el cursor */
+  color: #b4b4b4;
 }
 
-/* Responsividad para móviles */
+/* Contenido principal */
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+main h1 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+main p {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* Responsividad para tablets */
 @media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 15px;
+  }
+
   .baner-superior {
-    flex-direction: column;    /* enlaces uno debajo del otro */
-    align-items: center;       /* centrados */
-    gap: 20px;                 /* espacio entre enlaces en móvil */
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .logo {
+    height: 70px;
+  }
+
+  main h1 {
+    font-size: 1.3rem;
+  }
+
+  main p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Responsividad para móviles pequeños */
+@media (max-width: 480px) {
+  header {
+    padding: 10px;
+  }
+
+  .logo {
+    height: 50px;
   }
 
   .baner-superior a {
-    font-size: 20px;           /* un poco más grande en móvil */
-    padding: 10px 0;           /* espacio para que sea fácil de tocar */
+    font-size: 1rem;
+    padding: 8px 0;
+  }
+
+  main h1 {
+    font-size: 1.1rem;
+  }
+
+  main p {
+    font-size: 0.9rem;
   }
 }
