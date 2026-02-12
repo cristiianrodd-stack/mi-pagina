@@ -12,12 +12,13 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px; /* más equilibrado en móvil */
+  padding: 12px 20px;
 }
 
 /* Logo */
 .logo {
-  height: 60px; /* más pequeño en móvil */
+  max-width: 120px; /* tamaño proporcional */
+  height: auto;
 }
 
 /* Contenedor de enlaces */
@@ -71,7 +72,7 @@ main p {
   }
 
   .logo {
-    height: 70px;
+    max-width: 100px;
   }
 
   main h1 {
@@ -90,11 +91,11 @@ main p {
   }
 
   .logo {
-    height: 50px;
+    max-width: 80px;
   }
 
   .baner-superior a {
-    font-size: 1rem;
+    font-size: 0.95rem;
     padding: 8px 0;
   }
 
