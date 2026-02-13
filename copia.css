@@ -60,15 +60,18 @@ main p {
 /* Responsividad para tablets */
 @media (max-width: 768px) {
   header {
-    flex-direction: column;
+    flex-direction: row;   /* mantiene horizontal */
+    flex-wrap: wrap;       /* permite que los elementos bajen si no caben */
+    justify-content: center;
     padding: 15px;
   }
 
   .baner-superior {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;   /* mantiene horizontal */
+    flex-wrap: wrap;       /* los enlaces se acomodan en varias filas si es necesario */
     gap: 15px;
     margin-top: 10px;
+    justify-content: center;
   }
 
   .logo {
@@ -87,7 +90,17 @@ main p {
 /* Responsividad para móviles pequeños */
 @media (max-width: 480px) {
   header {
+    flex-direction: row;   /* sigue horizontal */
+    flex-wrap: wrap;
+    justify-content: center;
     padding: 10px;
+  }
+
+  .baner-superior {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
   }
 
   .logo {
